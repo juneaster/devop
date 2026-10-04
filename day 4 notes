@@ -1,0 +1,448 @@
+task 1 
+how to a 60k starting even not qualified
+
+less than 35k - http:208.8.8.133/otrs/customer.pl
+ user1 C1sc0123
+
+nmap -v 208.8.8.133
+
+
+
+STEP 1 PHYSICAL WIFI 
+
+EVIL TWIN ATTACK
+
+
+USED OSI LAYER 7 TO STEAL SEXVIDS
+
+PHYSICAL LAYER  1: Wifi : be on the same wifi network : evil twin
+3 ways to send
+fiber optic
+Voltage
+Interface
+Transmission
+
+
+ never log in public wifi
+
+netsh wlan show profile name="3F-Rivan" key=clear
+
+
+Layer 2 mac address :  nmap -sP 10.3.3.30./24
+ randomized mac - can check device brand
+
+Layer 3 network - IP adress
+
+Layer 4 -transport -Sa - Sa - E seen act - seen - act - established 
+
+how attak happens : 3 way handshake 
+hack  victim
+
+tcp.flags.syn == 1 && tcp.flags.ack == 0
+tcp.flags.syn == 1 
+-------syn------> L5
+<------ack ----
+-----syn/ack--->
+---established --->
+
+netstat -n -p tcp | findstr 445
+
+vpn software bought by scammer
+
+layer 5 session layer 
+ net use \\10.3.3.121\ipc$ /user:administrator
+net use \\10.3.3.121\ipc$ 
+
+net use x: /delete
+
+
+
+
+
+layer 6 presentation - jpeg, bitmap
+
+layer 7 - windows explorer app
+
+  net use x: /delete
+
+  net use x: \\10.3.3.121\c$
+
+
+run this to wireshark
+
+netstat -ano
+
+Security
+
+mitre 135 and 445 - lateral movement
+
+
+reconnaissance
+
+
+safe http
+
+PORT     STATE  SERVICE
+80/tcp   open   http
+443/tcp  open   https
+8080/tcp open   http-proxy
+8443/tcp open   https-alt
+
+
+
+job 
+splunk
+SOC analyst
+
+soc l3 /l4
+ http://208.8.8.133/otrs/index.pl
+
+
+security perimeter
+outside
+inside
+dmc
+
+cipher  - encrypt
+public key
+$#!!@
+hello
+public key infrastructure
+
+decipher -
+
+task 3 create own public key
+
+
+
+config t
+ ip domain name enujtuazon
+ crypto key generate rsa modulus 1024
+end 
+
+
+
+CISCO-FW.enujtuazon
+
+
+AAAAB3NzaC1yc2EAAAADAQABAAABAQDlkKpYr6J8oJ9Qmf1YX0TgC0gMunGzOP1AYaKv4BAz
+UsYN3l0MBX5JWRyxIVmmgwm9fQeJKVpgxmOrWejOcrr+OKX4Dh1wZ2L/77r49G9YlxD8aNzmjfvFUC5J
+NVQYnOilrKkfqPkiUQ4roK3PzgUphykmCuzZ4xfODBaHh9zJFwswHfkaqpt/KLnYfRCAN54VMZocY9NQ
+W9buR6BVERE3+JMe8wOlxzTbDo7dEgqAG+naF3QAoxOLNNza+XYEk9SDOAxXGMY78NtE2TKNVts6WLql
+PYR1UzMkqIqprK97Dj0ncfThmMXSt4neWLR9NJIjA/TOCfPB0kdpjkmicCFD
+
+
+
+
+
+click firewall
+
+command line
+
+
+config t
+NO ip access-list standard NOPORN
+ip access-list standard NOPORN
+DENY 66.254.0.0 0.0.255.255
+deny 161.49.0.0 0.0.255.255
+DENY 104.21.0.0 0.0.255.255
+DENY 68.235.0.0 0.0.255.255
+DENY 104.17.0.0 0.0.255.255
+DENY 88.208.0.0 0.0.255.255
+DENY 208.77.0.0 0.0.255.255
+DENY 172.67.0.0 0.0.255.255
+Permit Any
+Int Gi 1
+ ip access-group NOPORN in
+end
+
+
+ip access-group NOPORN in
+
+
+
+remove FW
+
+config t
+int gi 1
+ip access-group NOPORN in
+
+
+ping www.dlsu.edu.ph 172.67.14.0   104.22.36.0
+ping www.ccp.edu.ph 50.6.160.0     
+ping www.feu.edu.ph 184.168.125.0  
+ping  www.ue.edu.ph 155.137.92.0
+
+
+
+
+config t
+NO ip access-list standard NOISKUL
+ip access-list standard NOISKUL
+DENY   172.67.14.0  0.0.0.255
+DENY   104.20.42.168  0.0.0.255
+DENY   104.22.36.0  0.0.0.255
+DENY   50.6.160.0  0.0.0.255
+DENY   184.168.125.0  0.0.0.255
+DENY   155.137.92.0   0.0.0.255
+Permit Any
+Int Gi 1
+ ip access-group NOISKUL in
+end
+
+
+
+Task1.2: block admu.edu.ph, dlsu.edu.ph, ccp.edu.ph, ue.edu.ph
+
+ping www.dlsu.edu.ph 172.67.14.0   104.22.36.0
+ping www.ccp.edu.ph 50.6.160.0     
+ping www.feu.edu.ph 184.168.125.0  
+ping  www.ue.edu.ph 155.137.92.0  
+ping  www.yourschool.edu.ph = _________
+config t
+NO ip access-list standard NOISKUL
+ip access-list standard NOISKUL
+DENY   __.__.__.__   0.0.255.255
+DENY   __.__.__.__   0.0.255.255
+DENY   __.__.__.__   0.0.255.255
+DENY   __.__.__.__   0.0.255.255
+DENY   __.__.__.__   0.0.255.255
+Permit Any
+Int Gi 1
+ ip access-group NOISKUL in
+end
+YOUR COMPANY IS HAS VERY LOW INTERNET SPEED, BEC OF TORRENTS:
+www.thepiratebay.org   162.159.0.0     104.21.0.0
+www.limetorrents.com    172.67.0.0.   84.32.0.0
+www.freeanimeonline.com   76.223.0.0.  13.248.0.0.
+www.torlock2.com   104.21.0.0
+www.hentaisites.com 104.21.0.0   
+www.iptorrents.com  104.26.0.0.   95.211.0.0
+
+
+
+
+ticket number
+2026100471000024 
+
+
+
+
+
+
+TASK5: HOW TO START A CAREER IN NETWORK CYBERSECURITY FOR FREE!!
+intentionally hackable websites
+1. Hack The Box
+2. CTFlearn
+3. bWAPP
+4. HackThisSite
+5. Google Gruyere
+6. Damn Vulnerable iOS App - DVIA
+7. Hellbound Hackers
+8. OWASP Mutillidae II
+9. HackThis!!
+
+
+
+
+server module - server inside cisco
+
+CREATING FIRST PACKET FILTER FIREWALL
+FERRARI/LAMBO VS TOYOTA VIOS VS EBIKE:NWOW
+
+AI POWERED FIREWALL FORTINET 
+APPLICATION LAYER FIREWALL
+PACKET FILTER PLAYER
+
+
+TASK 4 : CREATEPACKET FILTER FIREWALL:
+ex1. create a firewall policy that twill allow:
+bet10.com will open http,https 80, 443
+bet11.com will open ssh, dns, https. 22,53.443
+
+format ***
+protocol hacker victim port {if}
+
+tco udp icmp, ip
+
+config t
+ no ip access-list extended FW1
+ ip access-list extended FW1
+ permit tcp any host bet10.com eq 80
+ permit tcp any host bet11.com eq 443
+ permit tcp any host bet11.com eq 22
+permit tcp any host bet11.com eq 53
+permit tcp any host bet11.com eq 443
+Int gi 3 
+ ip access-group FW1 in
+ do sh ip access-list FW1
+
+allowed again fire wall in port
+
+no ip access-group FW2 in
+
+Exercise 2
+
+ex1. create a firewall policy that twill allow:
+bet10.com will open 22,23,443, ping
+bet11.com will open 80,443,5060,1720,2000
+
+config t
+ no ip access-list extended FW2
+ ip access-list extended FW2
+ permit tcp any host bet10.com eq 22
+ permit tcp any host bet10.com eq 23
+ permit tcp any host bet10.com eq 443
+ permit icmp any hot bet10.com 
+ permit tcp any host bet11.com eq 80 
+ permit tcp any host bet11.com eq 443
+ permit tcp any host bet11.com eq 5060
+ permit tcp any host bet11.com eq 1720
+ permit tcp any host bet11.com eq 2000
+
+Int gi 3 
+ ip access-group FW2 in
+ do sh ip access-list FW2
+
+
+
+
+voip 
+
+1720/tcp open  h323q931
+2000/tcp open  cisco-sccp
+5060/tcp open  sip
+5061/tcp open  sip-tls
+
+
+
+not pat
+
+
+
+task 5: How properly protect your gambling sie
+ use the - NAT/PAT
+ networkaddress translation + port address translation
+
+
+private or insidelocal        public: outsideglobal: betlog.com
+ bet10.com: 192.168.103.10:80   208.8.8.69:80
+ bet10.com: 192.168.103.10:443   208.8.8.69:8443
+ bet11.com: 192.168.103.11:80    208.8.8.69:8080
+ bet11.com: 192.168.103.11:443    208.8.8.69:443
+
+
+
+
+config t
+no access-list 8
+access-list 8 permit host 192.168.103.10
+access-list 8 permit host 192.168.103.11
+ip host betlog.com 208.8.8.69
+Int Gi 3
+ ip nat Inside
+Int gi 1
+ ip nat Outside
+IP Nat inside source static tcp 192.168.103.10 80 208.8.8.69 80
+IP Nat inside source static tcp 192.168.103.10 443 208.8.8.69 8443
+IP Nat inside source static tcp 192.168.103.11 80 208.8.8.69 8080
+IP Nat inside source static tcp 192.168.103.11 443 208.8.8.69 443
+IP nat inside source list 8 int gi 1 Overload
+end
+show ip nat translation
+
+
+Overload - ip one is to many 
+
+
+output in cmd
+
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+80/tcp   open  http
+443/tcp  open  https
+8080/tcp open  http-proxy
+8443/tcp open  https-alt
+MAC Address: 00:0C:29:23:D2:E8 (VMware)
+
+
+
+task6 what career is pwede for you
+
+switching, routing, eigrp ospf, bgp = network engineer/analyst
+fw, vpn, hacking, cybersec , IR = SOC analyst , SOC Engineer 
+fortinet, palo alto 
+
+
+new job docker container
+dev ops
+
+
+
+task 7 what are the docker containerization
+        what OS IS Best to use : Linux apps.
+        Windows with WSL2 - subsystem linux
+
+
+
+
+
+
+control panel
+
+turn featured offs  
+
+       
+17-49 line 
+
+run this - guestshell enable
+
+clone up to 4 session
+then paste it guestshell run python3
+
+
+API engineering 
+
+
+
+--------
+Task 8 - Python automatin in Cisco
+line 119 - 130
+
+
+import cli
+var1= '''hostname NETDEVOPS
+int loop 4
+ip add 4.4.4.4 255.255.255.255
+int loop 5
+ip add 5.5.5.5 255.255.255.255
+int loop 6
+ip add 6.6.6.6 255.255.255.255
+end
+'''
+cli.configurep(var1)
+
+
+
+
+     
+notepad
+
+
+import cli
+cmd3 = '''
+    ip dhcp pool MINILINUX
+    network 192.168.102.0 255.255.255.0
+    default-router 192.168.102.11
+    domain-name MINILINUX.COM
+    dns-server 8.8.8.8
+    END
+'''
+cli.configurep(cmd3)
+
+
+
+
+
+
+
